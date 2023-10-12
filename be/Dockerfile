@@ -30,4 +30,4 @@ COPY . .
 EXPOSE 8000
 
 # Run the application.
-CMD ./node_modules/.bin/nodemon src/index.mjs
+CMD node --watch src/index.mjs
