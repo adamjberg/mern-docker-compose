@@ -2,6 +2,13 @@ services:
   be:
     build:
       context: ./be
+    develop:
+      watch:
+        - action: sync
+          path: ./be/src
+          target: /usr/src/app/src
+        - action: rebuild
+          path: ./be/package.json
     environment:
       NODE_ENV: production
     ports:
@@ -9,6 +16,12 @@ services:
   fe:
     build:
       context: ./fe
+    develop:
+      watch:
+        - action: rebuild
+          path: ./fe
+          ignore:
+            - node_modules/
     ports:
       - 8080:80
   mongo:
