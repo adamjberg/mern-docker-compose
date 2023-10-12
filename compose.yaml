@@ -6,3 +6,12 @@ services:
       NODE_ENV: production
     ports:
       - 8000:8000
+  fe:
+    build:
+      context: ./fe
+    ports:
+      - 8080:80
+  mongo:
+    image: mongo
+    ports:
+      - 27018:27017

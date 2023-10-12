@@ -1,0 +1,17 @@
+{
+  "name": "fe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild src/index.jsx --outdir=public --bundle --minify --sourcemap --define:process.env.NODE_ENV=\"\\\"production\\\"\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.19.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
